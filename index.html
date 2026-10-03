@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f8f5f0">
+<title>My Monthly Glow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <header class="header">
+    <div>
+      <div class="mini">✦ MY MONTHLY GLOW</div>
+      <h1 id="monthTitle">October 2026</h1>
+      <p id="progressText">Small steps. Big change. ♡</p>
+    </div>
+    <button class="round-btn" id="settingsBtn">⚙︎</button>
+  </header>
+
+  <section class="motivation-card">
+    <div class="sun">☀️</div>
+    <div class="quote">
+      <strong id="quoteText">Show up for yourself.</strong>
+      <span>One little check today becomes a better you tomorrow.</span>
+    </div>
+    <div class="ring" id="monthRing"><b id="monthPercent">0%</b></div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card lavender">
+      <span class="stat-icon">🔥</span>
+      <b id="streak">0</b>
+      <small>day streak</small>
+    </div>
+    <div class="stat-card mint">
+      <span class="stat-icon">🌱</span>
+      <b id="daysDone">0 / 31</b>
+      <small>perfect days</small>
+    </div>
+    <div class="stat-card peach">
+      <span class="stat-icon">✨</span>
+      <b id="totalDone">0</b>
+      <small>habits done</small>
+    </div>
+  </section>
+
+  <section class="tracker-card">
+    <div class="tracker-title">
+      <div>
+        <span class="mini">YOUR DAILY PROMISES</span>
+        <h2>Keep going 💗</h2>
+      </div>
+      <span class="swipe">← swipe →</span>
+    </div>
+    <div class="tracker-scroll">
+      <div class="tracker-head">
+        <div class="habit-label">HABIT</div>
+        <div class="day-labels" id="dayLabels"></div>
+      </div>
+      <div id="habitRows"></div>
+    </div>
+  </section>
+
+  <section class="today-card">
+    <div class="today-top">
+      <div>
+        <span class="mini">TODAY'S WIN</span>
+        <h2 id="todayHeading">You can do this! 🌷</h2>
+      </div>
+      <div class="today-bubble" id="todayPercent">0%</div>
+    </div>
+    <div class="progress-track"><span id="todayBar"></span></div>
+    <div class="today-bottom">
+      <strong id="todayCount">0 / 0 complete</strong>
+      <span>Every check counts ♡</span>
+    </div>
+  </section>
+
+  <footer>
+    <button class="pill-btn" id="editBtn">✎ Edit habits</button>
+    <button class="pill-btn danger" id="resetBtn">↻ Reset</button>
+    <span class="saved" id="savedStatus">☁ Ready</span>
+  </footer>
+</main>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div><span class="mini">PERSONALIZE</span><h2>Your habits 🌸</h2></div>
+      <button class="close-btn" id="closeBtn">×</button>
+    </div>
+    <p>One habit per line. Keep them simple enough that you can win most days.</p>
+    <textarea id="habitEditor" rows="10"></textarea>
+    <button class="primary-btn" id="saveHabitsBtn">Save my habits ✨</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
