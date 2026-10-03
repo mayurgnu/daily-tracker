@@ -36,7 +36,9 @@ display:grid;place-items:center;background:conic-gradient(var(--green) 0deg,#fff
 .tracker-title h2,.today-card h2{font-size:20px;letter-spacing:-.03em;margin:4px 0 0}
 .swipe{font-size:9px;color:#a19aa3}
 .tracker-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.tracker-head,.habit-row{display:grid;grid-template-columns:142px repeat(var(--days),36px);min-width:calc(142px + var(--days)*36px)}
+.tracker-head,.habit-row{display:grid;min-width:calc(142px + var(--days)*36px)}
+.tracker-head{grid-template-columns:142px calc(var(--days)*36px)}
+.day-labels{display:grid;grid-template-columns:repeat(var(--days),36px)}
 .tracker-head{background:#fbf9f6;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .habit-label{position:sticky;left:0;z-index:3;background:#fbf9f6;padding:11px;font-size:9px;font-weight:900;color:var(--muted);letter-spacing:.1em}
 .day-label{height:42px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#938c96;line-height:12px}
@@ -70,5 +72,5 @@ font-size:10px;font-weight:800;color:var(--ink);cursor:pointer}
 .modal-head h2{margin:4px 0;font-size:23px}.modal-box p{font-size:11px;color:var(--muted);line-height:1.5}
 textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:15px;padding:12px;resize:vertical;outline:none}
 .primary-btn{width:100%;border:0;background:#83b99d;color:white;border-radius:15px;padding:13px;margin-top:10px;font-weight:900}
-@media(min-width:700px){.app{padding:35px 25px}.tracker-head,.habit-row{grid-template-columns:200px repeat(var(--days),42px);min-width:calc(200px + var(--days)*42px)}}
-@media(max-width:380px){.tracker-head,.habit-row{grid-template-columns:128px repeat(var(--days),34px);min-width:calc(128px + var(--days)*34px)}.habit-name{font-size:10px}}
+@media(min-width:700px){.app{padding:35px 25px}.tracker-head{grid-template-columns:200px calc(var(--days)*42px)}.habit-row{grid-template-columns:200px repeat(var(--days),42px);min-width:calc(200px + var(--days)*42px)}.day-labels{grid-template-columns:repeat(var(--days),42px)}}
+@media(max-width:380px){.tracker-head{grid-template-columns:128px calc(var(--days)*34px)}.habit-row{grid-template-columns:128px repeat(var(--days),34px);min-width:calc(128px + var(--days)*34px)}.day-labels{grid-template-columns:repeat(var(--days),34px)}.habit-name{font-size:10px}}
